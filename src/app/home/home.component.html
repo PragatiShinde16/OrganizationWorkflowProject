@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+<br>
+<div class="container-fluid">
+    <table class="table table-bordered">
+        <thead class="table-secondary">
+            <tr>
+                <th>Sr.No</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Status</th>
+                <th>Created By</th>
+                <!-- <th>Created Date</th> -->
+                <th>Updated By</th>
+                <th>Updated Date</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let items of empData; index as i">
+                <td>{{i+1}}</td>
+                <td>{{items.name}}</td>
+                <td>{{items.dept}}</td>
+                <td>{{items.status}}</td>
+                <td>{{items.createdBy}}</td>
+                <!-- <td>{{items.createdDate | date}}</td> -->
+                <td>{{items.updatedBy}}</td>
+                <td>{{items.updatedDate | date:"dd-MM-yyyy"}}</td>
+                <td>{{items.country.cname}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
