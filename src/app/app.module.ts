@@ -7,18 +7,24 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import {HttpClientModule} from '@angular/common/http';
+import { DetailComponent } from './detail/detail.component';
+import { AddempComponent } from './addemp/addemp.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    DetailComponent,
+    AddempComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

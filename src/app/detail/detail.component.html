@@ -1,0 +1,49 @@
+<app-header></app-header>
+
+<!-- <div>{{data.id}}</div>
+<div>{{data.name}}</div>
+<div>{{data.mob_no}}</div>
+<div>{{data.email_id}}</div>
+<div>{{data.dept}}</div>
+<div>{{data.salary}}</div>
+<div>{{data.status}}</div>
+<div>{{data.createdBy}}</div>
+<div>{{data.updatedBy}}</div>
+<div>{{data.updatedDate | date}}</div> -->
+
+<div class="container-fluid mt-5 text-center">
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width:600px">
+                <div class="card-header">
+                  <h5>{{empObj.name}}</h5>
+                </div>
+                <div class="card-body">
+                    <label for="">Mob No ::</label>
+                    <h6>{{empObj.mob_no}}</h6>
+                    <label for="">Email ::</label>
+                    <h6>{{empObj.email_id}}</h6>
+                    <label for="">Department ::</label>
+                    <h6>{{empObj.dept}}</h6>
+                    <label for="">Salary ::</label>
+                    <h6>{{empObj.salary}}</h6>
+                    <label for="">Status ::</label>
+                    <h6>{{empObj.status}}</h6>
+                    <label for="">CreatedBy ::</label>
+                    <h6>{{empObj.createdBy}}</h6>
+                    <!-- <label for="">CreatedDate ::</label>
+                    <h6>{{empObj.createdDate}}</h6> -->
+                    <label for="">UpdatedBy ::</label>
+                    <h6>{{empObj.updatedBy}}</h6>
+                    <label for="">UpdatedDate ::</label>
+                    <h6>{{empObj.updatedDate | date}}</h6>
+                    <label for="">Country ::</label>
+                    <h6>{{empObj.country.cname}}</h6>
+                </div>
+                <div class="card-footer">
+                  <button routerLink="" class="btn btn-success">Home</button>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

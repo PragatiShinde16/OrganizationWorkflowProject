@@ -2,10 +2,19 @@
 
 <br>
 <div class="container-fluid">
+
+    <div>
+        <button routerLink = "/addemp" class="btn btn-info">Add Emp</button>
+        <button (click)="onUpdate()" class="btn btn-warning">Update Emp</button>
+        <button (click)="onDelete()" class="btn btn-danger">Delete Emp</button>
+        <button (click)="onChange()" class="btn btn-success">Change Status</button>
+    </div>
+    <br>
     <table class="table table-bordered">
         <thead class="table-secondary">
             <tr>
                 <th>Sr.No</th>
+                <th>Action</th>
                 <th>Name</th>
                 <th>Department</th>
                 <th>Status</th>
@@ -19,9 +28,18 @@
         <tbody>
             <tr *ngFor = "let items of empData; index as i">
                 <td>{{i+1}}</td>
-                <td>{{items.name}}</td>
+                <td><input type="radio" name="record" (click) = "onEdit(items.id)"></td>
+                <td><a [routerLink]="['/detail', items.id]">{{items.name}}</a></td>
                 <td>{{items.dept}}</td>
-                <td>{{items.status}}</td>
+                <td><h5><span
+                    [ngClass] = "{
+                        'badge':true,
+                        'rounded-pill':true,
+                        'bg-success':items.status.toLowerCase()==='active',
+                        'bg-warning':items.status.toLowerCase()==='inactive',
+                        'bg-danger':items.status.toLowerCase()==='suspended'
+                    }"
+                    >{{items.status}}</span></h5></td>
                 <td>{{items.createdBy}}</td>
                 <!-- <td>{{items.createdDate | date}}</td> -->
                 <td>{{items.updatedBy}}</td>
